@@ -1,0 +1,31 @@
+/* Animation: la piste contient deux séries d'items identiques pour boucle continue */
+.track {
+display: flex;
+gap: 1rem;
+will-change: transform;
+/* animation definie inline via CSS variable pour durée */
+animation: slide var(--duration, 18s) linear infinite;
+}
+
+
+@keyframes slide {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+
+
+/* Pause on hover / focus for accesibilité */
+.carousel:hover .track,
+.carousel:focus-within .track {
+animation-play-state: paused;
+}
+
+
+/* Make sure duplicated content doesn't wrap awkwardly */
+.track > * { flex: 0 0 auto; }
+
+
+/* For small screens, slow a bit */
+@media (max-width: 640px) {
+:root { --duration: 28s; }
+}

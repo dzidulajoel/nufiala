@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://api.fontshare.com/v2/css? f[]=melodrama@500,600,700,1&f[]=satoshi@400,500,700&f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swipe.css">
+    <style>
+        .titre {
+            font-family: 'General Sans', sans-serif;
+        }
+
+        .sous_titre {
+            font-family: 'Melodrama', serif;
+        }
+
+        .paragraphe {
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        .df_jcc_iac_g2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px
+        }
+            .no-scrollbar {
+      -ms-overflow-style: none;  /* IE et Edge */
+      scrollbar-width: none;     /* Firefox */
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;             /* Chrome, Safari, Opera */
+    }
+    </style>
+
+</head>
+<body class="p-4 w-full h-full flex flex-col gap-8">
+    <main class="h-[96vh] w-full rounded-lg flex justify-center items-center gap-4">
+        <nav class="w-[12vw] h-full bg-black/10 rounded-lg flex flex-col justify-start items-start py-8 px-4">
+            <h1 class="w-full flex justify-start items-center">
+                <a href="./" class="text-2xl font-bold titre">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                    <path fill="#000" d="M13 7.83c.85-.3 1.53-.98 1.83-1.83H18l-3 7c0 1.66 1.57 3 3.5 3s3.5-1.34 3.5-3l-3-7h2V4h-6.17c-.41-1.17-1.52-2-2.83-2s-2.42.83-2.83 2H3v2h2l-3 7c0 1.66 1.57 3 3.5 3S9 14.66 9 13L6 6h3.17c.3.85.98 1.53 1.83 1.83V19H2v2h20v-2h-9z"/>
+                </svg>
+                </a>
+            </h1>
+
+            <div class="flex flex-col justify-between items-start h-full py-8">
+                <ul class="flex flex-col gap-4">
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M3 13h8V3H3zm0 8h8v-6H3zm10 0h8v-10h-8zm0-18v6h8V3z"/></svg>
+                    Tableau de bord
+                    </a>
+                </li>
+
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5M6 11c1.66 0 2.99-1.34 2.99-3S7.66 5 6 5S3 6.34 3 8s1.34 3 3 3m0 2c-.29 0-.62.02-.97.05C3.86 13.36 3 14.21 3 15v2h6v-2c0-.79-.86-1.64-2.03-1.95c-.35-.03-.68-.05-.97-.05"/></svg>
+                    Utilisateurs
+                    </a>
+                </li>
+
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m-1 17.93c-3.95-.49-7.06-3.85-7.45-7.93H5v-2H3.55c.39-4.08 3.5-7.44 7.45-7.93V7h2V3.07c3.95.49 7.06 3.85 7.45 7.93H19v2h1.45c-.39 4.08-3.5 7.44-7.45 7.93V17h-2z"/></svg>
+                    Compétences
+                    </a>
+                </li>
+
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg>
+                    Messagerie
+                    </a>
+                </li>
+
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20m1 17h-2v-2h2zm1.07-7.75l-.9.92C12.45 12.9 12 13.5 12 15h-2v-.5c0-.83.45-1.64 1.17-2.29l1.24-1.26a2 2 0 0 0 .59-1.41a2 2 0 1 0-4 0H8a4 4 0 1 1 8 0c0 .88-.36 1.67-.93 2.25"/></svg>
+                    Paramètres
+                    </a>
+                </li>
+                </ul>
+
+                <ul class="flex flex-col gap-4">
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M12 8.75a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5"/><path fill="#000" fill-rule="evenodd" d="M12.68 2.806a1.4 1.4 0 0 0-1.36 0l-7.2 4A1.4 1.4 0 0 0 3.4 8.03v7.94c0 .509.276.977.72 1.224l7.2 4a1.4 1.4 0 0 0 1.36 0l7.2-4a1.4 1.4 0 0 0 .72-1.223V8.03a1.4 1.4 0 0 0-.72-1.224zM7.25 12a4.75 4.75 0 1 1 9.5 0a4.75 4.75 0 0 1-9.5 0" clip-rule="evenodd"/></svg>
+                    Profil
+                    </a>
+                </li>
+
+                <li class="paragraphe text-md">
+                    <a href="#" class="flex items-center gap-2 text-red-500 hover:text-red-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#000" d="M16 13v-2H7V8l-5 4l5 4v-3z"/><path fill="#000" d="M20 3H9a2 2 0 0 0-2 2v4h2V5h11v14H9v-4H7v4a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg>
+                    Déconnexion
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="w-[80vw] h-full rounded-lg">
+
+            <div id="section1" class="w-full h-full rounded-lg flex bg-black flex-col lg:flex-row gap-4 p-4 hidden">
+
+                <!-- Colonne gauche : Statistiques -->
+                <div class="w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Carte utilisateurs -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center justify-center text-white">
+                    <h2 class="text-lg font-semibold">Utilisateurs</h2>
+                    <p class="text-3xl font-bold mt-2 text-cyan-400">1 245</p>
+                    <span class="text-xs mt-1 text-gray-300">+12% ce mois</span>
+                    </div>
+
+                    <!-- Carte compétences -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center justify-center text-white">
+                    <h2 class="text-lg font-semibold">Compétences échangées</h2>
+                    <p class="text-3xl font-bold mt-2 text-green-400">876</p>
+                    <span class="text-xs mt-1 text-gray-300">+9% ce mois</span>
+                    </div>
+
+                    <!-- Carte sessions -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center justify-center text-white">
+                    <h2 class="text-lg font-semibold">Sessions actives</h2>
+                    <p class="text-3xl font-bold mt-2 text-orange-400">42</p>
+                    <span class="text-xs mt-1 text-gray-300">-3% cette semaine</span>
+                    </div>
+
+                    <!-- Carte signalements -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center justify-center text-white">
+                    <h2 class="text-lg font-semibold">Signalements</h2>
+                    <p class="text-3xl font-bold mt-2 text-red-400">5</p>
+                    <span class="text-xs mt-1 text-gray-300">2 nouveaux</span>
+                    </div>
+
+                    <!-- Carte revenus (optionnel) -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center justify-center text-white">
+                    <h2 class="text-lg font-semibold">Revenus</h2>
+                    <p class="text-3xl font-bold mt-2 text-yellow-400">$2,450</p>
+                    <span class="text-xs mt-1 text-gray-300">+5% ce mois</span>
+                    </div>
+
+                    <!-- Carte taux de satisfaction -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center justify-center text-white">
+                    <h2 class="text-lg font-semibold">Satisfaction</h2>
+                    <p class="text-3xl font-bold mt-2 text-purple-400">94%</p>
+                    <span class="text-xs mt-1 text-gray-300">+2 points</span>
+                    </div>
+                </div>
+
+                <!-- Colonne droite : Graphique ou résumé -->
+                <div class="w-full lg:w-1/3 flex flex-col bg-white/10 backdrop-blur-lg rounded-2xl p-4 text-white">
+                    <h2 class="text-lg font-semibold mb-2">Activité récente</h2>
+                    <ul class="space-y-2 text-sm text-gray-200">
+                    <li class="flex justify-between border-b border-white/10 pb-1">
+                        <span>+25 nouveaux utilisateurs</span>
+                        <span class="text-cyan-400">il y a 2h</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/10 pb-1">
+                        <span>8 sessions terminées</span>
+                        <span class="text-green-400">hier</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/10 pb-1">
+                        <span>1 signalement traité</span>
+                        <span class="text-red-400">aujourd’hui</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>3 nouvelles compétences ajoutées</span>
+                        <span class="text-yellow-400">il y a 1h</span>
+                    </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div id="section2" class="w-full h-full rounded-lg flex bg-black flex-col lg:flex-row gap-4 p-4 hidden">
+                <div class="w-full bg-white/10 backdrop-blur-lg rounded-2xl p-4 text-white">
+                    <h2 class="text-xl font-semibold mb-4">Gestion des utilisateurs</h2>
+
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full text-sm">
+                        <thead class="text-gray-300 border-b border-white/10">
+                        <tr>
+                            <th class="text-left py-2 px-3">Nom</th>
+                            <th class="text-left py-2 px-3">Email</th>
+                            <th class="text-left py-2 px-3">Rôle</th>
+                            <th class="text-left py-2 px-3">Statut</th>
+                            <th class="text-left py-2 px-3">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="border-b border-white/10">
+                            <td class="py-2 px-3">John Doe</td>
+                            <td class="py-2 px-3">john@exemple.com</td>
+                            <td class="py-2 px-3 text-cyan-400">Candidat</td>
+                            <td class="py-2 px-3 text-green-400">Actif</td>
+                            <td class="py-2 px-3"><button class="text-red-400 hover:text-red-500">Suspendre</button></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3">Awa K.</td>
+                            <td class="py-2 px-3">awa@exemple.com</td>
+                            <td class="py-2 px-3 text-yellow-400">Formateur</td>
+                            <td class="py-2 px-3 text-green-400">Actif</td>
+                            <td class="py-2 px-3"><button class="text-red-400 hover:text-red-500">Suspendre</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section3" class="w-full h-full rounded-lg flex bg-black flex-col lg:flex-row gap-4 p-4 hidden">
+                <div class="w-full bg-white/10 backdrop-blur-lg rounded-2xl p-4 text-white">
+                    <h2 class="text-xl font-semibold mb-4">Compétences proposées</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <h3 class="text-lg font-semibold text-cyan-400">Développement Web</h3>
+                        <p class="text-sm text-gray-300">Proposé par <span class="text-white">Joel G.</span></p>
+                        <p class="mt-2 text-sm">Niveau : <span class="text-yellow-400">Avancé</span></p>
+                        <button class="mt-3 px-3 py-1 bg-cyan-600 rounded-lg text-sm">Détails</button>
+                    </div>
+
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <h3 class="text-lg font-semibold text-cyan-400">Marketing Digital</h3>
+                        <p class="text-sm text-gray-300">Proposé par <span class="text-white">Awa K.</span></p>
+                        <p class="mt-2 text-sm">Niveau : <span class="text-yellow-400">Intermédiaire</span></p>
+                        <button class="mt-3 px-3 py-1 bg-cyan-600 rounded-lg text-sm">Détails</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section4" class="w-full h-full rounded-lg flex bg-black flex-col lg:flex-row gap-4 p-4 ">
+                <div class="w-full bg-white/10 backdrop-blur-lg rounded-2xl p-4 text-white">
+                    <h2 class="text-xl font-semibold mb-4">Messagerie & Support</h2>
+
+                    <div class="flex flex-col gap-4">
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <p><span class="font-semibold text-cyan-400">Awa K.</span> : Bonjour, j’ai un souci avec mon compte.</p>
+                        <p class="text-xs text-gray-400 mt-1">Reçu il y a 10 min</p>
+                    </div>
+
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <p><span class="font-semibold text-cyan-400">Joel G.</span> : Merci pour la mise à jour, tout fonctionne !</p>
+                        <p class="text-xs text-gray-400 mt-1">Reçu hier</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section5" class="w-full h-full rounded-lg flex bg-black flex-col lg:flex-row gap-4 p-4 hidden">
+                <div class="w-full bg-white/10 backdrop-blur-lg rounded-2xl p-4 text-white">
+                    <h2 class="text-xl font-semibold mb-4">Paramètres du système</h2>
+
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm mb-1">Nom du site</label>
+                        <input type="text" value="SkillSwap" class="w-full bg-white/5 rounded-lg px-3 py-2 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-1">Email de contact</label>
+                        <input type="email" value="support@skillswap.com" class="w-full bg-white/5 rounded-lg px-3 py-2 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-1">Langue par défaut</label>
+                        <select class="w-full bg-white/5 rounded-lg px-3 py-2 outline-none">
+                        <option>Français</option>
+                        <option>Anglais</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-1">Thème</label>
+                        <select class="w-full bg-white/5 rounded-lg px-3 py-2 outline-none">
+                        <option>Sombre</option>
+                        <option>Clair</option>
+                        </select>
+                    </div>
+                    <div class="col-span-full mt-4">
+                        <button class="bg-cyan-600 px-4 py-2 rounded-lg text-sm hover:bg-cyan-700">Sauvegarder</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+</body>

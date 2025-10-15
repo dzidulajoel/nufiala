@@ -1,0 +1,73 @@
+🚀 SkillSwap – Roadmap chronologique
+Phase 1 – MVP Web (2–4 semaines)
+
+Objectif : Valider le concept avec une version web simple et fonctionnelle
+
+1️⃣ Backend Laravel
+
+    Authentification (inscription, login, mot de passe oublié)
+    Gestion utilisateurs (CRUD profil, compétences offertes/recherchées)
+    Système de points basique (gain et dépense)
+    Base de données MySQL / PostgreSQL (users, skills, points, messages, reviews)
+    API REST pour fonctionnalités principales
+
+2️⃣ Frontend (Blade ou React simple)
+
+    Landing page + CTA inscription/login
+    Dashboard utilisateur avec points et actions rapides
+    Profil utilisateur avec compétences et historique d’échanges
+    Recherche de compétences avec filtres simples
+    Messagerie interne basique (Livewire ou polling AJAX)
+    Avis et notation utilisateurs
+
+3️⃣ Tests et validation
+
+    Tests unitaires backend
+    Tests fonctionnels API et frontend
+    Responsive web (desktop + mobile)
+
+4️⃣ Déploiement MVP
+
+    Hébergement Laravel (Render, Railway, TPECloud)
+    Base de données en ligne
+    Domaine + SSL
+
+Phase 2 – UI/UX et Dashboard avancé (2–3 semaines)
+    Objectif : Améliorer l’expérience utilisateur et rendre l’interface plus moderne
+    Implémenter design moderne / minimaliste (TailwindCSS)
+    Composants réutilisables (cartes, boutons, badges)
+    Micro-interactions : hover, transitions, notifications
+    Dashboard complet : résumé des points, échanges récents, statistiques
+    Admin panel avec Filament (gestion utilisateurs, compétences, messages, avis)
+
+Phase 3 – Messagerie et interactions temps réel (1–2 semaines)
+
+    Objectif : rendre la plateforme plus dynamique et interactive
+    Messagerie temps réel (Livewire + Pusher ou WebSocket)
+    Notifications en direct pour nouveaux messages ou demandes d’aide
+    Mise à jour dynamique du tableau de bord et points
+
+Phase 4 – Mobile / API étendue (2–3 semaines)
+
+    Objectif : Étendre l’accès à React Native ou autre frontend mobile
+    Créer une API REST Laravel complète et sécurisée (JWT ou Sanctum)
+    Développer frontend mobile React Native (auth, dashboard, messagerie, profil)
+    Synchronisation avec la base de données web
+    Notifications push (optionnel MVP)
+
+Phase 5 – Fonctionnalités avancées et optimisation (2–3 semaines)
+
+    Objectif : Rendre SkillSwap complet et performant
+    Recherche avancée : localisation, disponibilité, filtres multiples
+    Historique complet des transactions et points
+    Système de badges ou récompenses
+    Amélioration performances : cache, optimisation queries, pagination infinie
+    Tests complets (unitaires, fonctionnels, responsive)
+    Optimisation SEO et accessibilité
+
+Phase 6 – Déploiement final et production
+
+    Hébergement stable backend + frontend
+    Configuration HTTPS, sauvegardes automatiques, monitoring
+    Version bêta publique / tests utilisateurs
+    Collecte feedback pour itérations futures

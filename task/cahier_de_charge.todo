@@ -1,0 +1,136 @@
+Nom du projet : NUNYA / Tɔxɛ/ TalentsCroisés
+
+
+
+2. Introduction 
+
+    📌 Contexte du projet
+
+        Dans un monde où l’accès à la formation et aux compétences reste souvent limité par des contraintes financières, 
+        de nombreuses personnes disposent pourtant de savoirs précieux qu’elles pourraient transmettre. Aujourd’hui, 
+        il existe peu de plateformes locales ou internationales qui permettent un échange direct de compétences sans passer par un paiement monétaire.
+
+
+    ❗ Problématique identifiée
+
+        - L’apprentissage est souvent coûteux et inaccessible à certaines populations.
+        - Les personnes qui possèdent des compétences utiles n’ont pas toujours de moyen simple de les valoriser sans argent.
+        - Les plateformes existantes sont souvent centrées sur la vente de services (ex: freelancing), et non sur l’entraide et le troc de savoirs.
+        - Il manque un outil qui favorise un apprentissage collaboratif, équitable et communautaire.
+
+
+    🎯 Objectifs globaux du projet
+
+        - Mettre en relation des personnes désireuses de partager et d’apprendre des compétences.
+        - Créer un système de points permettant un échange équitable sans argent.
+        - Favoriser la collaboration et l’entraide dans une communauté digitale inclusive.
+        - Tester rapidement le concept avec une version MVP simple, épurée et fonctionnelle.
+        - Encourager l’apprentissage continu et la valorisation des talents dans différents domaines.
+
+
+    ✅ Pertinence et justification du choix
+
+        - Le projet répond à un besoin réel : apprendre et échanger sans barrière financière.
+        - Il favorise la démocratisation de l’accès au savoir, surtout dans les pays en développement.
+        - Le modèle basé sur les points permet de garantir équité et confiance entre les utilisateurs.
+        - Il s’inscrit dans la tendance actuelle des plateformes collaboratives et de l’économie de partage.
+        - C’est un concept qui peut s’étendre à l’international tout en ayant une forte pertinence locale (Afrique, diaspora, communautés étudiantes).
+
+    🎯 Objectifs spécifiques
+
+        - Développer une plateforme digitale (web + mobile) qui permette aux utilisateurs de s’inscrire, créer un profil et présenter leurs compétences.
+        - Mettre en place un système de points équitable qui récompense l’entraide et régule les échanges.
+        - Faciliter la recherche de compétences grâce à une base de données structurée et un moteur de recherche simple (par catégorie, localisation, mot-clé).
+        - Intégrer une messagerie interne pour fluidifier la communication entre utilisateurs.
+        - Permettre l’évaluation des échanges (notation et avis) afin de garantir la confiance et la crédibilité.
+        - Déployer un tableau de bord utilisateur pour suivre ses points, échanges et activités.
+        - Assurer une expérience utilisateur moderne, intuitive et responsive (design simple, épuré, cohérent).
+
+    📊 Résultats attendus
+
+        - Mise en ligne d’un MVP fonctionnel (web responsive en priorité).
+        - Création d’une communauté active autour du partage de savoirs.
+        - Accumulation de données d’usage réelles (types de compétences échangées, volume d’échanges, interactions).
+        - Mise en place d’un système de réputation basé sur la confiance (avis + points).
+        - Validation ou non du potentiel du modèle économique pour une version 2 (freemium, premium, partenariats éducatifs).
+
+    🌍 Impacts sociaux et économiques
+
+        *** Impacts sociaux
+
+            - Accessibilité au savoir : permettre à chacun d’apprendre sans barrière financière.
+            - Renforcement du lien social : créer des ponts entre personnes, cultures et générations.
+            - Autonomisation : valoriser les compétences locales et individuelles.
+            - Égalité des chances : démocratiser l’accès à l’apprentissage.
+
+        *** Impacts économiques
+
+            - Réduction des coûts liés à la formation classique (alternatives gratuites/partagées).
+            - Création d’un écosystème basé sur la collaboration plutôt que la compétition.
+            - Opportunité de développement futur vers des services premium (coaching, certification, partenariats).
+            - Potentiel de scalabilité internationale avec adaptation culturelle et linguistique.
+
+
+3. Public cible / Utilisateurs finaux
+
+    - Étudiants : cherchant à apprendre de nouvelles compétences sans frais.
+    - Freelances / jeunes professionnels : souhaitant élargir leur savoir-faire et se créer un réseau.
+    - Autodidactes / passionnés : voulant partager leurs talents (musique, langues, cuisine, tech…).
+    - Communautés locales : associations, groupes d’entraide, diaspora.
+
+4.1 Besoins fonctionnels
+
+    - Fonctionnalités attendues dans la V1 :
+    - Authentification et gestion des comptes : inscription, connexion, récupération de mot de passe.
+    - Profils utilisateurs : photo, bio, compétences offertes et recherchées.
+    - Tableau de bord : points disponibles, activités récentes, accès rapide aux fonctionnalités.
+    - Système de points : gain/dépense de points selon les échanges.
+    - Recherche de compétences : moteur de recherche + filtres.
+    - Messagerie interne : chat simple pour organiser les échanges.
+    - Notation et avis : système de réputation basé sur notes et commentaires.
+    - Paramètres : gestion du profil, préférences, notifications.
+    - (Évolutif en V2 : upload de fichiers, appel vidéo, paiement en ligne si monétisation)
+
+4.2 Besoins non fonctionnels
+
+    *** Performance :
+
+        - Temps de réponse < 2 secondes pour les pages principales.
+        - Système capable de gérer +10 000 utilisateurs simultanés (scalabilité progressive).
+
+    *** Sécurité :
+
+        - Authentification sécurisée (JWT, mots de passe hashés).
+        - Sauvegarde régulière des données.
+        - HTTPS obligatoire.
+
+    *** Ergonomie :
+
+        - Design responsive (desktop, mobile, tablette).
+        - Accessibilité (contrastes, navigation clavier, ARIA).
+
+    *** Compatibilité :
+
+        - Navigateurs récents (Chrome, Firefox, Safari, Edge).
+        - Mobiles Android/iOS (via web responsive puis app native en V2).
+
+5. Étude de l’existant
+
+    *** Solutions similaires
+
+        - TimeRepublik (plateforme mondiale de troc de compétences, système basé sur le temps).
+        - Skillshare (plutôt orienté cours en ligne, payant).
+        - Superprof (annonces de cours particuliers, paiement direct).
+
+    *** Limites de l’existant
+
+        - Peu de solutions gratuites et équitables (sans argent).
+        - Expérience utilisateur souvent complexe ou trop orientée "marketplace" payante.
+        - Manque d’ancrage communautaire et local (beaucoup sont centrées sur l’international anglophone).
+
+    *** Valeur ajoutée de SkillSwap
+
+        - Système de points équitables au lieu de l’argent → accessibilité maximale.
+        - Interface moderne, minimaliste et intuitive, pensée mobile-first.
+        - Mise en avant de l’entraide communautaire et interculturelle.
+        - Scalabilité vers un modèle freemium (services avancés, certifications, coaching).

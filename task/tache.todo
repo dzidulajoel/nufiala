@@ -1,0 +1,142 @@
+Filament = admin / back-office
+Livewire = frontend dynamique Laravel
+Inertia.js + React = SPA Laravel moderne
+React seul = frontend web/mobile évolutif
+
+
+
+📝 SkillSwap – TODO List
+
+1️⃣ Frontend – Web (React ou Blade/Inertia.js)
+
+Landing page
+    Hero section avec CTA “S’inscrire / Se connecter”
+    Présentation de la plateforme et fonctionnalités clés
+    Témoignages / avis utilisateurs
+    Footer avec liens (contact, CGU, réseaux sociaux)
+
+Authentification
+    Page inscription (formulaire, validation)
+    Page login (formulaire + mot de passe oublié)
+    Gestion des erreurs et feedback utilisateur
+
+Dashboard utilisateur
+    Affichage des points et niveau utilisateur
+    Accès rapide aux compétences offertes et recherchées
+    Notifications/messages récents
+    Vue de résumé des échanges et avis
+
+Recherche de compétences
+    Barre de recherche + filtres
+    Affichage des résultats sous forme de cartes
+    Pagination ou infinite scroll
+    Bouton pour demander de l’aide / proposer une compétence
+
+Profil utilisateur
+    Affichage des informations de profil
+    Compétences offertes et recherchées
+    Historique des échanges
+    Option éditer le profil
+
+Profil utilisateur
+    Affichage des informations de profil
+    Compétences offertes et recherchées
+    Historique des échanges
+    Option éditer le profil
+
+Messagerie
+    Liste des conversations
+    Chat en temps réel ou quasi réel (Livewire, Pusher, ou WebSocket)
+    Notifications de nouveaux messages
+
+Avis et notation
+    Formulaire pour laisser un avis
+    Affichage des notes et commentaires sur profil utilisateur
+
+Paramètres et sécurité
+    Changement mot de passe
+    Préférences notifications
+    Suppression / désactivation compte
+
+UI / UX général
+    Responsive (desktop + mobile)
+    Couleurs, typographie, cartes, boutons, badges
+    Transitions et micro-interactions
+
+
+
+2️⃣ Backend – Laravel (API / Livewire / Filament)
+
+Authentification et sécurité
+
+    Inscription / login / JWT ou Sanctum
+    Réinitialisation mot de passe
+    Middleware pour routes protégées
+
+Gestion des utilisateurs
+
+    CRUD utilisateurs (admin + auto-update profil)
+    Gestion des compétences offertes / recherchées
+    Historique points / transactions
+
+Système de points
+
+    Attribution de points pour aide fournie
+    Déduction de points pour aide demandée
+    Historique et suivi des points
+
+Recherche et filtres
+
+    Endpoint API pour recherche compétences
+    Filtres (compétence, localisation, disponibilité)
+    Pagination / infinite scroll
+
+Messagerie
+
+    CRUD conversations et messages
+    Notifications en temps réel (option WebSocket ou polling)
+
+Avis et notation
+
+    Endpoint pour créer et récupérer avis
+    Calcul de moyenne des notes par utilisateur
+
+Admin panel (Filament)
+
+    Gestion utilisateurs, compétences, messages, avis
+    Dashboard admin avec statistiques (utilisateurs actifs, points, échanges)
+
+Base de données
+
+    Création des tables : users, skills, messages, points, transactions, reviews
+    Relations entre tables
+    Migrations et seeders pour test
+
+API et intégration frontend
+
+    Routes RESTful ou GraphQL pour toutes les fonctionnalités
+    CORS et authentification pour React / mobile
+    Validation et sécurisation des données
+
+3️⃣ Mobile (React Native si prévu)
+
+    Consommer la même API Laravel que le web
+    Authentification / stockage JWT
+    Dashboard mobile (points, échanges)
+    Profil utilisateur
+    Messagerie mobile
+    Notifications push (optionnel MVP)
+
+4️⃣ Tests et Qualité
+
+    Tests unitaires backend (Laravel PHPUnit)
+    Tests fonctionnels (API endpoints)
+    Tests frontend (React / Livewire)
+    Tests responsive (desktop + mobile)
+
+5️⃣ Déploiement
+
+    Hébergement backend Laravel (Render, Railway, TPECloud…)
+    Hébergement frontend React (Vercel, Netlify, ou Blade sur Laravel)
+    Base de données MySQL / PostgreSQL
+    Mise en production sécurisée (HTTPS, CORS, sauvegarde DB)

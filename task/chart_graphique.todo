@@ -1,0 +1,79 @@
+🎨 Charte Graphique – SkillSwap
+1️⃣ Logo et identité visuelle
+
+Nom : SkillSwap
+
+Concept du logo : Deux mains/échanges stylisés formant un cercle, symbolisant le partage et l’entraide.
+
+Style : Minimaliste, plat (flat design) avec dégradés doux.
+
+Utilisation : Logo principal, favicon, icônes d’applications mobiles.
+
+2️⃣ Palette de couleurs
+Catégorie	Couleur	Hex	Usage
+Primaire	Bleu profond	#1E2A78	Arrière-plan, header, boutons principaux
+Secondaire	Turquoise	#00B8D9	Accent sur CTA, hover, icônes
+Accent	Jaune vif	#FFCC00	Call-to-action, badges, alertes positives
+Neutre clair	Blanc	#FFFFFF	Fond de pages, sections, cartes
+Neutre sombre	Gris foncé	#4B5563	Texte, sous-titres, icônes secondaires
+Gris clair	#F4F6F8	Fond de cartes, zones de séparation	
+
+Dégradés suggérés :
+
+Bleu → Turquoise pour boutons et bannières hero
+
+Jaune → Orange léger pour CTA hover
+
+3️⃣ Typographie
+Usage	Police	Style	Exemple
+Titres & accroches	Poppins	Semi-Bold / Bold	H1-H3, titres de sections
+Textes / paragraphes	Inter	Regular / Medium	Contenu, labels, descriptions
+UI / boutons / labels courts	Inter	Semi-Bold	CTA, menus, badges
+
+4️⃣ Iconographie
+
+Style flat design / line icons moderne
+
+Icônes pour :
+
+Compétences
+
+Messages
+
+Points
+
+Profils
+
+Paramètres
+
+Consistance : toutes les icônes arrondies et uniformes, même épaisseur de trait
+
+5️⃣ UI Components
+Composant	Style recommandé
+Boutons	Arrondis (border-radius 12px), couleur primaire, hover : dégradé bleu-turquoise, texte blanc
+Cartes	Ombres douces (shadow-md), coins arrondis (8–12px), fond blanc ou gris clair
+Champs / Inputs	Bords arrondis, focus turquoise clair, placeholder gris
+Barres de navigation	Sidebar desktop, bottom bar mobile, fond primaire ou blanc avec icônes colorées
+Badges / Notifications	Couleur accent (jaune), texte noir ou blanc selon contraste
+
+
+
+6️⃣ Layout & Grille
+
+Desktop : grille 12 colonnes, marges larges, espacements généreux
+
+Mobile : grille flexible 4–6 colonnes, padding réduit, responsive pour toutes les sections
+
+Sections : beaucoup d’espace blanc, hiérarchie claire (titre → texte → CTA)
+
+Animation / micro-interactions : hover, transitions douces (0.2–0.3s) sur boutons et cartes
+
+7️⃣ Ton et style visuel
+
+Moderne, simple et épuré
+
+Confiance & convivialité : visuels humains, illustrations flat design
+
+Cohérent : chaque page suit le même système de couleurs, typographie et composants
+
+Expérience utilisateur : intuitive, fluide, responsive

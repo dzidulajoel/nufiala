@@ -1,0 +1,183 @@
+1. Hero Section (Bannière principale)
+    *** Titre: 
+    *** Sous-titre :
+            SkillSwap vous permet de partager vos talents et d’acquérir de nouvelles compétences dans une communauté collaborative, 
+            équitable et accessible à tous.
+
+    *** CTA principal :
+        Rejoignez la communauté
+
+    *** Visuel/illustration suggéré :
+        Personnes échangeant des compétences (musique, codage, langues, artisanat).
+        Animation légère ou gradient bleu–turquoise pour donner du dynamisme.
+
+2. Comment ça marche / Fonctionnement
+
+    *** Titre :
+        “Comment ça marche ?”
+
+    *** Étapes :
+
+        - Créez votre profil
+        - Affichez vos compétences offertes et celles que vous souhaitez apprendre.
+        - Trouvez ou proposez des compétences
+        - Recherchez facilement des profils correspondant à vos besoins ou offrez votre aide.
+        - Échangez et gagnez des points
+        - Aidez quelqu’un pour gagner des points, dépensez-les pour recevoir de l’aide.
+        - Évaluez et partagez votre expérience
+        - Laissez un avis pour inspirer confiance et renforcer la communauté.
+
+    *** Visuel suggéré :
+        - Icônes simples ou illustrations pour chaque étape, style moderne et minimaliste.
+
+3. Avantages / Pourquoi nous choisir
+
+    *** Titre :
+        “Pourquoi SkillSwap ?”
+
+    *** Blocs avantages :
+
+        - Gratuit et accessible – Apprenez et enseignez sans aucune barrière financière.
+        - Communauté collaborative – Connectez-vous avec des personnes motivées et passionnées.
+        - Système de points équitable – Vos compétences ont de la valeur et sont récompensées.
+        - Interface simple et moderne – Utilisez une plateforme intuitive, sur mobile ou desktop.
+
+4. Témoignages / Avis utilisateurs
+
+    *** Titre :
+        “Ce que disent nos utilisateurs”
+
+    *** Exemples de témoignages :
+
+        ⭐⭐⭐⭐⭐ “Grâce à SkillSwap, j’ai appris la guitare et aidé d’autres personnes en codage. Une expérience incroyable !” – Awa, étudiante
+        ⭐⭐⭐⭐⭐ “Une plateforme simple, intuitive et vraiment motivante pour échanger des compétences.” – Jean, freelance
+
+5. Section “Appel à l’action”
+
+    *** Titre :
+        “Prêt à partager et apprendre ?”
+
+    *** Texte court :
+        “Rejoignez la communauté SkillSwap et commencez à échanger vos compétences dès aujourd’hui.”
+
+    *** CTA :
+        “Commencez maintenant”
+
+6. FAQ / Questions fréquentes
+
+    *** Titre :
+        “Questions fréquentes”
+
+    *** Exemples :
+
+        - Comment gagner des points ?
+        En aidant d’autres utilisateurs dans les compétences que vous maîtrisez.
+
+        - Comment dépenser mes points ?
+        Pour demander de l’aide ou apprendre une compétence auprès de quelqu’un.
+
+        - SkillSwap est-il gratuit ?
+        Oui, la plateforme est entièrement gratuite pour tous les utilisateurs.
+
+        - Est-ce sécurisé ?
+        Oui, vos données sont protégées et les échanges évalués pour garantir la confiance.
+
+7. Footer
+
+    *** Blocs :
+
+        - Liens : À propos | Contact | CGU | Politique de confidentialité
+        - Réseaux sociaux : Facebook | Instagram | LinkedIn
+        - Mini slogan : “SkillSwap – Connecter, Partager, Grandir ensemble.”
+
+8. Inscription / Login
+    *** Inscription
+
+        Titre : « Rejoignez SkillSwap dès aujourd’hui »
+        Sous-titre : « Créez votre profil et commencez à partager et apprendre vos compétences »
+        Champs : Nom, Email, Mot de passe, Confirmer mot de passe
+        Micro-textes :
+            « Votre mot de passe doit contenir au moins 8 caractères »
+            « En vous inscrivant, vous acceptez nos Conditions et Politique de confidentialité »
+            CTA : « Créer mon compte »
+
+    *** Login
+
+        Titre : « Bienvenue de retour ! »
+        Sous-titre : « Connectez-vous pour continuer à échanger et apprendre »
+        Micro-textes :
+            « Mot de passe oublié ? »
+            « Pas encore de compte ? Inscrivez-vous »
+            CTA : « Se connecter »
+
+9. Dashboard
+
+    Titre principal : « Bonjour [Prénom], prêt à échanger aujourd’hui ? »
+    Sections clés :
+        Points disponibles : « Vous avez X points »
+        Actions rapides : « Proposer une compétence » / « Chercher une compétence »
+        Historique récent : « Vos derniers échanges »
+        Notifications : « Vous avez 2 nouveaux messages »
+        CTA secondaires : « Voir mon profil », « Voir mes messages »
+
+10. Recherche de compétences
+
+    Titre : « Trouvez la compétence que vous cherchez »
+    Barre de recherche : « Rechercher une compétence ou un utilisateur »
+    Filtres : Catégorie, Localisation, Points nécessaires
+    Résultats :
+        Carte utilisateur : Photo, Nom, Compétences offertes, Points demandés, Avis ⭐
+        CTA : « Contacter » ou « Demander de l’aide »
+    Micro-textes :
+        « Aucun résultat ? Essayez un autre mot-clé ou élargissez votre recherche »
+
+11. Profil utilisateur
+
+    Titre : « Profil de [Nom] »
+    Sections :
+
+        Photo + Bio
+        Compétences offertes / recherchées
+        Points disponibles
+        Avis et notes : « 4.8 ⭐ basé sur 12 échanges »
+        CTA : « Demander de l’aide » / « Envoyer un message »
+
+    Micro-textes :
+        « Vous pouvez laisser un avis après un échange »
+
+12. Messagerie
+
+    Titre : « Conversations »
+    Liste de contacts récents : Nom + photo + aperçu du dernier message
+    Vue chat :
+
+        Bulles de messages claires (bleu/turquoise pour l’utilisateur, gris clair pour l’autre)
+        Micro-textes : « Tapez votre message… », « Envoyer »
+        CTA : « Envoyer un message »
+
+13. Avis / Notation
+
+    Titre : « Laissez votre avis »
+
+    Micro-textes :
+
+        « Donnez une note de 1 à 5 étoiles »
+        « Partagez un commentaire court sur votre expérience »
+        « Votre avis sera visible sur le profil de l’utilisateur »
+        CTA : « Envoyer mon avis »
+
+14. Paramètres / Profil
+
+    Titre : « Paramètres »
+    Sections :
+
+        Profil : modifier photo, bio, compétences
+        Compte : email, mot de passe
+        Notifications : activer/désactiver alertes et messages
+        CTA : « Enregistrer les modifications »
+
+    Micro-textes :
+
+        « Vos modifications sont enregistrées automatiquement »
+        « Sécurisez votre compte avec un mot de passe fort » 
+
