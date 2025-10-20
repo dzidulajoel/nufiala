@@ -4,6 +4,6 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['id_utilisateur']) || empty($_SESSION['id_utilisateur'])) {
-        header('Location: /connexion');
+        header('Location: ../connexion');
         exit();
 }

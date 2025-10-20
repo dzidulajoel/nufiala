@@ -25,3 +25,33 @@ resizeBtn.addEventListener('click', () => {
     inner.classList.toggle('w-16', réduit);
   }
 });
+  //----------------------------------------------------
+
+const showBtn = document.getElementById('show');
+const hideBtn = document.getElementById('hide');
+const navbar = document.getElementById('navbar');
+
+// Ouvrir
+showBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // empêche la propagation pour éviter une fermeture immédiate
+  navbar.classList.remove('-translate-x-full');
+  navbar.classList.add('translate-x-0');
+});
+
+// Fermer via le bouton
+hideBtn.addEventListener('click', () => {
+  navbar.classList.remove('translate-x-0');
+  navbar.classList.add('-translate-x-full');
+});
+
+// Fermer en cliquant n’importe où ailleurs
+document.addEventListener('click', (e) => {
+  // Vérifie que le clic est à l’extérieur de la navbar et du bouton "show"
+  if (!navbar.contains(e.target) && !showBtn.contains(e.target)) {
+    navbar.classList.remove('translate-x-0');
+    navbar.classList.add('-translate-x-full');
+  }
+});
+
+
+

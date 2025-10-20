@@ -1,6 +1,6 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'skillguard');
+define('DB_NAME', 'nufiala');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 // define('DB_USER', 'dzidula_joel');

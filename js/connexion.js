@@ -1,0 +1,126 @@
+const connexion_button = document.querySelector('#connexion_button');
+const connexion_form = document.querySelector('#connexion_form');
+
+
+connexion_form.addEventListener('submit', async (event) => {
+
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('pwd').value;
+
+    const data = {
+        email,
+        password,
+    };
+
+    let tousRemplis = true;
+    for (let key in data) {
+        if (!data[key] || data[key].trim() === "") {
+            showAlert("Tous les champs doivent être remplis !", false);
+            tousRemplis = false;
+            break;
+        }
+    }
+
+    showAlert('connexion reussie !', true)
+
+    if (tousRemplis) {
+        try {
+            const response = await fetch('../scripts/connexion.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                throw new Error(`Erreur de réseau : ${response.status} ${response.statusText}`);
+            }
+            const result = await response.json();
+            if (result.success) {
+                showAlert("Connexion réussie.", true);
+
+                
+                connexion_form.reset();
+
+                const redirectMap = {
+                    admin: '../admin',
+                    recruteur: '../recruteur',
+                    candidat: '../candidat'
+                };
+
+                setTimeout(()=>{
+                    window.location.href = redirectMap[result.role] || '../accueil';
+                    }, 2000)
+            }
+            else {
+                showAlert(result.message, false);
+            }
+        }
+        catch (err) {
+            showAlert("Une erreur est survenue. Veuillez réessayer", false);
+        }
+    }
+
+
+});
+
+
+function verifierMotDePasse(password) {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return regex.test(password);
+}
+
+const showAlert = (message, isSuccess = true) => {
+    const existing = document.querySelector('#msg_inscription');
+    if (existing) existing.remove();
+
+    const alert = document.createElement('div');
+    alert.id = 'msg_inscription';
+    alert.className = `absolute top-[18%] left-1/2 -translate-x-1/2 ${isSuccess ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 w-auto opacity-0 transition-opacity duration-500`;
+
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    icon.setAttribute('width', '1.3em');
+    icon.setAttribute('height', '1.3em');
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('fill', 'none');
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', isSuccess ? 'M9 12.5L11 14.5L15 10.5' : 'M15 9L9 15');
+    path.setAttribute('stroke', 'white');
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', '12');
+    circle.setAttribute('cy', '12');
+    circle.setAttribute('r', '9');
+    circle.setAttribute('stroke', 'white');
+    circle.setAttribute('stroke-width', '2');
+
+    icon.appendChild(path);
+    icon.appendChild(circle);
+    alert.appendChild(icon);
+
+    const text = document.createElement('p');
+    text.className = 'text-sm font-medium paragraphe';
+    text.textContent = message;
+    alert.appendChild(text);
+
+    document.body.appendChild(alert);
+
+    requestAnimationFrame(() => {
+        alert.classList.remove('opacity-0');
+        alert.classList.add('opacity-100');
+    });
+
+    setTimeout(() => {
+        alert.classList.remove('opacity-100');
+        alert.classList.add('opacity-0');
+        setTimeout(() => alert.remove(), 500);
+    }, isSuccess ? 3000 : 4000);
+}
+
