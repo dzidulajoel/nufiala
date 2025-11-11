@@ -1,58 +1,60 @@
-document.querySelector('#formRecuperation').addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const email = document.querySelector('#email').value.trim();
-        const sendBtn = document.querySelector('#sendBtn');
-
-        sendBtn.disabled = true;
-        sendBtn.textContent = 'Envoi en cours...';
+document.querySelectorAll('.suppression_post').forEach(btn => {
+    btn.addEventListener('click', async () => {
+        const id = btn.dataset.suppression_post;
+        const card = btn.closest('.carte_proposition'); // le conteneur principal de la carte
 
         try {
-                const response = await fetch('../scripts/recuperation.php', {
-                        method: 'POST',
-                        headers: {
-                                'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ email })
-                });
+            const response = await fetch('../scripts/suppression.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id })
+            });
 
-                if (!response.ok) {
-                        throw new Error(`Erreur réseau : ${response.status} ${response.statusText}`);
-                }
+            if (!response.ok) {
+                throw new Error(`Erreur de réseau : ${response.status} ${response.statusText}`);
+            }
 
-                const result = await response.json();
+            const result = await response.json();
 
-                if (result.success) {
-                        document.querySelector('#formRecuperation').reset();
-                        showAlertLike('Lien de réinitialisation envoyé avec succès ', true);
+            if (result.success) {
+                showAlertDelete("Suppression en cours ...", true);
 
-                        // Option : soit on redirige directement
-                        setTimeout(() => {
-                                window.location.href = "../connexion";
-                        }, 2000);
+                // Petite attente visuelle avant la disparition
+                setTimeout(() => {
+                    showAlertDelete(result.message, true);
 
-                        
-                } else {
-                        showAlertLike(result.message, false);
-                }
+                    // 🧹 Suppression visuelle de la carte
+                    if (card) {
+                        card.classList.add('opacity-0', 'scale-95', 'transition', 'duration-300');
+                        setTimeout(() => card.remove(), 1000); // supprime après animation
+                    }
+
+                    // Met à jour le compteur
+                    const compteur = document.querySelector('.nombre_propositions');
+                    if (compteur && result.count !== undefined) {
+                        compteur.textContent = result.count;
+                    }
+                }, 1500);
+            } else {
+                showAlertDelete(result.message, false);
+            }
         } catch (err) {
-                console.error(err);
-                showAlertLike("Une erreur est survenue. Veuillez réessayer.", false);
-        } finally {
-                // Réactiver le bouton après la requête
-                sendBtn.disabled = false;
-                sendBtn.textContent = 'Envoyer';
+            showAlertDelete("Une erreur est survenue. Veuillez réessayer", false);
         }
+    });
 });
 
-const showAlertLike = (message, isSuccess = true) => {
+
+
+
+const showAlertDelete = (message, isSuccess = true) => {
     // Supprime tout ancien message avant d’en afficher un nouveau
-    const existing = document.querySelector('#msg_parametre');
+    const existing = document.querySelector('#msg_delete');
     if (existing) existing.remove();
 
     // Crée le conteneur principal
     const alert = document.createElement('div');
-    alert.id = 'msg_inscription';
+    alert.id = 'msg_delete';
     alert.className = `absolute top-[4%] left-1/2 -translate-x-1/2 ${isSuccess ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 w-auto opacity-0 transition-opacity duration-500`;
 
     // Ajoute l’icône SVG

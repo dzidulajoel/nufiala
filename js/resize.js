@@ -1,4 +1,4 @@
-const resizeBtn = document.querySelector('.resize');
+const resizeBtn = document.querySelector('.resizeBtn');
 const sidebar = document.querySelector('nav');
 const textes = document.querySelectorAll('.lien');
 const logo = document.querySelector('.logo');

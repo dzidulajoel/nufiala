@@ -1,0 +1,9 @@
+username = dzidula
+password = B9sZLGd$R$
+email = gamathodzidula@gmail.com
+
+
+
+G -> S (P) : envoie de point G a S 
+G -> S (R) : envoie de point S a G 
+

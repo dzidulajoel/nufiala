@@ -36,7 +36,7 @@ sauvegarder_les_modifications.addEventListener('click', async () => {
 
     inputs.forEach(input => {
         data[input.id] = input.value.trim();
-        input.disabled = false;
+        input.disabled = true;
     });
 
     try {
@@ -54,6 +54,7 @@ sauvegarder_les_modifications.addEventListener('click', async () => {
         const result = await response.json();
         if (result.success) {
             showAlert(result.message, true);
+            inputs.forEach(input => input.disabled = true);
 
         } else {
             showAlert(result.message, false);

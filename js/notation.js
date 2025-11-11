@@ -1,51 +1,48 @@
-document.querySelector('#formRecuperation').addEventListener('submit', async (e) => {
-        e.preventDefault();
+const stars = document.querySelectorAll('#rating .star');
 
-        const email = document.querySelector('#email').value.trim();
-        const sendBtn = document.querySelector('#sendBtn');
+stars.forEach(star => {
 
-        sendBtn.disabled = true;
-        sendBtn.textContent = 'Envoi en cours...';
+    star.addEventListener('click', async () => {
+        const value = star.getAttribute('data-value');
+        const [note, idEnvoyeur, idReceveur] = value.split('_');
+        stars.forEach(s => s.classList.remove('active'));
+        star.classList.add('active');
+        let next = star.nextElementSibling;
+        while (next) {
+            next.classList.add('active');
+            next = next.nextElementSibling;
+        }
 
         try {
-                const response = await fetch('../scripts/recuperation.php', {
-                        method: 'POST',
-                        headers: {
-                                'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ email })
-                });
+            const response = await fetch('../scripts/notation.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ note, idEnvoyeur, idReceveur })
+            });
 
-                if (!response.ok) {
-                        throw new Error(`Erreur réseau : ${response.status} ${response.statusText}`);
-                }
+            if (!response.ok) {
+                throw new Error(`Erreur de réseau : ${response.status} ${response.statusText}`);
+            }
+            const result = await response.json();
+            if (result.success) {
+                showAlertNotation(result.message, true);
 
-                const result = await response.json();
 
-                if (result.success) {
-                        document.querySelector('#formRecuperation').reset();
-                        showAlertLike('Lien de réinitialisation envoyé avec succès ', true);
-
-                        // Option : soit on redirige directement
-                        setTimeout(() => {
-                                window.location.href = "../connexion";
-                        }, 2000);
-
-                        
-                } else {
-                        showAlertLike(result.message, false);
-                }
-        } catch (err) {
-                console.error(err);
-                showAlertLike("Une erreur est survenue. Veuillez réessayer.", false);
-        } finally {
-                // Réactiver le bouton après la requête
-                sendBtn.disabled = false;
-                sendBtn.textContent = 'Envoyer';
+            } else {
+                showAlertNotation(result.message, false);
+            }
         }
+        catch (err) {
+            showAlertNotation("Une erreur est survenue. Veuillez réessayer", false);
+        }
+    });
 });
 
-const showAlertLike = (message, isSuccess = true) => {
+
+
+const showAlertNotation = (message, isSuccess = true) => {
     // Supprime tout ancien message avant d’en afficher un nouveau
     const existing = document.querySelector('#msg_parametre');
     if (existing) existing.remove();

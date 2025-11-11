@@ -1,59 +1,64 @@
-document.querySelector('#formRecuperation').addEventListener('submit', async (e) => {
-        e.preventDefault();
+document.querySelectorAll('.btn_invivtation').forEach(btn => {
+    const initialText = btn.textContent;
+    btn.addEventListener('click', async() => {
+        
+        const id = btn.dataset.invitation;
+        const recherche = btn.dataset.recherche;
+        const proposition = btn.dataset.proposition;
+        const post_id = btn.dataset.post_id;
+        const type = {recherche, proposition, post_id};
 
-        const email = document.querySelector('#email').value.trim();
-        const sendBtn = document.querySelector('#sendBtn');
+        const data =  {id, type};
 
-        sendBtn.disabled = true;
-        sendBtn.textContent = 'Envoi en cours...';
-
-        try {
-                const response = await fetch('../scripts/recuperation.php', {
-                        method: 'POST',
-                        headers: {
-                                'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ email })
+            try {
+                const response = await fetch('../scripts/invitation.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
                 });
 
                 if (!response.ok) {
-                        throw new Error(`Erreur réseau : ${response.status} ${response.statusText}`);
+                    throw new Error(`Erreur de réseau : ${response.status} ${response.statusText}`);
                 }
-
                 const result = await response.json();
 
-                if (result.success) {
-                        document.querySelector('#formRecuperation').reset();
-                        showAlertLike('Lien de réinitialisation envoyé avec succès ', true);
-
-                        // Option : soit on redirige directement
-                        setTimeout(() => {
-                                window.location.href = "../connexion";
-                        }, 2000);
-
-                        
-                } else {
-                        showAlertLike(result.message, false);
+                
+                if (result.success) {  
+                    btn.textContent = "Demande en cours ...";
+                   setTimeout(()=>{
+                        showAlert_inv(result.message, true);
+                        btn.textContent = "En attente de reponse";
+                        btn.classList.add('bg-black/50')
+                   }, 2000)
                 }
-        } catch (err) {
-                console.error(err);
-                showAlertLike("Une erreur est survenue. Veuillez réessayer.", false);
-        } finally {
-                // Réactiver le bouton après la requête
-                sendBtn.disabled = false;
-                sendBtn.textContent = 'Envoyer';
-        }
+
+                else {
+                    showAlert_inv(result.message, false);    
+                    btn.classList.remove('bg-black/50')  
+                    btn.textContent = initialText;             
+                }
+            }
+
+            catch (err) {
+                showAlert_inv("Une erreur est survenue. Veuillez réessayer", false);
+            }
+
+    })
 });
 
-const showAlertLike = (message, isSuccess = true) => {
+
+// ALERTE DE MESSAGE
+const showAlert_inv = (message, isSuccess = true) => {
     // Supprime tout ancien message avant d’en afficher un nouveau
-    const existing = document.querySelector('#msg_parametre');
+    const existing = document.querySelector('#msg_invitation');
     if (existing) existing.remove();
 
     // Crée le conteneur principal
     const alert = document.createElement('div');
-    alert.id = 'msg_inscription';
-    alert.className = `absolute top-[4%] left-1/2 -translate-x-1/2 ${isSuccess ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 w-auto opacity-0 transition-opacity duration-500`;
+    alert.id = 'msg_invitation';
+    alert.className = `z-1000 absolute top-[4%] left-1/2 -translate-x-1/2 ${isSuccess ? 'bg-green-500' : 'bg-red-500'} text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-3 w-auto opacity-0 transition-opacity duration-500`;
 
     // Ajoute l’icône SVG
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

@@ -31,7 +31,7 @@
     </style>
 </head>
 
-<body class="min-h-screen flex items-center justify-center bg-black/10 relative">
+<body class="w-full h-[100vh] flex items-center justify-center bg-black/10 relative">
 
     <div id="msg_inscription"></div>
 
@@ -43,7 +43,7 @@
         <form class="space-y-5" id="connexion_form">
 
             <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1 paragraphe">Nom d'utilisateur</label>
+                <label class="block text-sm font-medium text-gray-700 mb-1 paragraphe">Email</label>
                 <input id="email" type="text" placeholder="Entrez votre nom d'utilisateur" class="paragraphe w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-cyan-500 focus:outline-none" required>
             </div>
 

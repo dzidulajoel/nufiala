@@ -1,51 +1,35 @@
-document.querySelector('#formRecuperation').addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const email = document.querySelector('#email').value.trim();
-        const sendBtn = document.querySelector('#sendBtn');
-
-        sendBtn.disabled = true;
-        sendBtn.textContent = 'Envoi en cours...';
-
+document.querySelectorAll('.btn_supprimer').forEach(btn => {
+    btn.addEventListener('click', async () => {
+        const id = btn.dataset.refuser;
+        
         try {
-                const response = await fetch('../scripts/recuperation.php', {
-                        method: 'POST',
-                        headers: {
-                                'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ email })
-                });
+            const response = await fetch('../scripts/admin_delete.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id })
+            });
 
-                if (!response.ok) {
-                        throw new Error(`Erreur réseau : ${response.status} ${response.statusText}`);
-                }
-
-                const result = await response.json();
-
-                if (result.success) {
-                        document.querySelector('#formRecuperation').reset();
-                        showAlertLike('Lien de réinitialisation envoyé avec succès ', true);
-
-                        // Option : soit on redirige directement
-                        setTimeout(() => {
-                                window.location.href = "../connexion";
-                        }, 2000);
-
-                        
-                } else {
-                        showAlertLike(result.message, false);
-                }
-        } catch (err) {
-                console.error(err);
-                showAlertLike("Une erreur est survenue. Veuillez réessayer.", false);
-        } finally {
-                // Réactiver le bouton après la requête
-                sendBtn.disabled = false;
-                sendBtn.textContent = 'Envoyer';
+            if (!response.ok) {
+                throw new Error(`Erreur de réseau : ${response.status} ${response.statusText}`);
+            }
+            const result = await response.json();
+            if (result.success) {
+                showAlert(result.message, true);
+            } else {
+                showAlert(result.message, false);
+            }
         }
+        catch (err) {
+            showAlert("Une erreur est survenue. Veuillez réessayer", false);
+        }
+
+    });
 });
 
-const showAlertLike = (message, isSuccess = true) => {
+
+const showAlert = (message, isSuccess = true) => {
     // Supprime tout ancien message avant d’en afficher un nouveau
     const existing = document.querySelector('#msg_parametre');
     if (existing) existing.remove();

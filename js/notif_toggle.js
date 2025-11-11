@@ -87,17 +87,3 @@ document.addEventListener('click', (e) => {
 });
 
 
-// const modifierBtn = document.getElementById('modifier_proil');
-// const parametreSection = document.querySelector('.parametre');
-
-// // Afficher la section quand on clique sur "Modifier"
-// modifierBtn.addEventListener('click', () => {
-//   parametreSection.classList.remove('hidden');
-// });
-
-// // Fermer si clic en dehors
-// document.addEventListener('click', (e) => {
-//   if (!parametreSection.contains(e.target) && e.target !== modifierBtn) {
-//     parametreSection.classList.add('hidden');
-//   }
-// });
